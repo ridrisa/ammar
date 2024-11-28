@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ammar Real Estate</title>
+  <!-- Tailwind CSS via CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Lucide Icons via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Custom Styles -->
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    /* Hero Section Custom Styles */
+    .hero-bg {
+      background-image: url('coverr.png');
+    }
+    /* Smooth Scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-white min-h-screen">
+
+  <!-- Navigation Bar -->
+  <nav class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#home" class="text-2xl font-bold text-gray-900">Ammar Real Estate</a>
+      <div class="hidden md:flex space-x-6">
+        <a href="#features" class="text-gray-700 hover:text-gray-900">Features</a>
+        <a href="#design" class="text-gray-700 hover:text-gray-900">Design</a>
+        <a href="#available-units" class="text-gray-700 hover:text-gray-900">Units</a>
+        <a href="#contact" class="text-gray-700 hover:text-gray-900">Contact</a>
+      </div>
+      <button id="menuBtn" class="md:hidden focus:outline-none">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden bg-white md:hidden">
+      <a href="#features" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Features</a>
+      <a href="#design" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Design</a>
+      <a href="#available-units" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Units</a>
+      <a href="#contact" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative h-screen bg-cover bg-center hero-bg" id="home">
+    <div class="absolute inset-0 bg-black bg-opacity-40">
+      <div class="container mx-auto px-6 h-full flex items-center">
+        <div class="max-w-3xl text-white">
+          <h1 class="text-5xl font-bold mb-6">Experience Sustainable Luxury Living</h1>
+          <p class="text-xl mb-8">Where innovation meets elegance in modern home design</p>
+          <a href="#contact" class="bg-white text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
+            Schedule a Viewing
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Smart Features -->
+  <section class="py-20 bg-gray-50" id="features">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-16">Innovative Living Solutions</h2>
+      <div class="grid md:grid-cols-3 gap-12">
+        <!-- Feature 1 -->
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="mb-6">
+            <i data-lucide="sun" class="w-8 h-8 text-amber-500"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Solar Integration</h3>
+          <p class="text-gray-600 mb-4">Integrated solar panels with Tesla Powerwall storage</p>
+          <p class="text-sm text-gray-500">24/7 clean energy backup</p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="mb-6">
+            <i data-lucide="car" class="w-8 h-8 text-green-600"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">EV Charging</h3>
+          <p class="text-gray-600 mb-4">Multiple charging stations in every unit</p>
+          <p class="text-sm text-gray-500">Level 2 &amp; DC fast charging</p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="mb-6">
+            <i data-lucide="smartphone" class="w-8 h-8 text-blue-500"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Smart Home</h3>
+          <p class="text-gray-600 mb-4">Full home automation system</p>
+          <p class="text-sm text-gray-500">Voice-controlled environment</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Design Showcase -->
+  <section class="py-20" id="design">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-16">Exquisite Design</h2>
+      <div class="flex justify-center mb-12">
+        <div class="inline-flex rounded-lg overflow-hidden">
+          <button id="exteriorBtn" class="px-6 py-3 bg-gray-900 text-white">Exterior Design</button>
+          <button id="interiorBtn" class="px-6 py-3 bg-gray-100 text-gray-700">Interior Design</button>
+        </div>
+      </div>
+      <div id="designsContainer" class="grid md:grid-cols-2 gap-8">
+        <!-- Designs will be injected here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Available Units Section -->
+  <section class="py-20 bg-gray-50" id="available-units">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-16">Available Units</h2>
+      <div class="grid md:grid-cols-3 gap-12">
+        <!-- Unit 1 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <img src="unit1.jpeg" alt="Unit 1" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-4">Penthouse Suite</h3>
+            <p class="text-gray-600 mb-4">4 Bed, 3 Bath, 3500 sqft</p>
+            <a href="#contact" class="text-amber-500 font-semibold hover:underline">Schedule a Tour</a>
+          </div>
+        </div>
+        <!-- Unit 2 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <img src="unit2.jpeg" alt="Unit 2" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-4">Garden Villa</h3>
+            <p class="text-gray-600 mb-4">3 Bed, 2.5 Bath, 2800 sqft</p>
+            <a href="#contact" class="text-amber-500 font-semibold hover:underline">Schedule a Tour</a>
+          </div>
+        </div>
+        <!-- Unit 3 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <img src="unit3.webpfloo" alt="Unit 3" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-4">City View Apartment</h3>
+            <p class="text-gray-600 mb-4">2 Bed, 2 Bath, 1800 sqft</p>
+            <a href="#contact" class="text-amber-500 font-semibold hover:underline">Schedule a Tour</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floor Plans Section -->
+  <section class="py-20" id="floor-plans">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-16">Floor Plans</h2>
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Floor Plan 1 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <img src="floorplan1.webp" alt="Floor Plan 1" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-4">Penthouse Layout</h3>
+            <a href="floorplan1.webp" target="_blank" class="text-amber-500 font-semibold hover:underline">View Full Plan</a>
+          </div>
+        </div>
+        <!-- Floor Plan 2 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <img src="floorplan2.webp" alt="Floor Plan 2" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-4">Villa Layout</h3>
+            <a href="floorplan2.webp" target="_blank" class="text-amber-500 font-semibold hover:underline">View Full Plan</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Virtual Tours Section -->
+  <section class="py-20 bg-gray-100" id="virtual-tours">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-8">Experience Virtual Tours</h2>
+      <p class="text-xl text-gray-600 mb-12">Explore our properties from the comfort of your home.</p>
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Virtual Tour 1 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <img src="porsh.jpg" alt="Virtual Tour 1" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-4">Penthouse Tour</h3>
+            <a href="https://www.youtube.com/watch?v=example1" target="_blank" class="text-amber-500 font-semibold hover:underline">Watch Tour</a>
+          </div>
+        </div>
+        <!-- Virtual Tour 2 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <img src="15.jpg" alt="Virtual Tour 2" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-4">Villa Tour</h3>
+            <a href="https://www.youtube.com/watch?v=example2" target="_blank" class="text-amber-500 font-semibold hover:underline">Watch Tour</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sustainability Section -->
+  <section class="py-20" id="sustainability">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-16">Our Commitment to Sustainability</h2>
+      <p class="text-xl text-gray-600 mb-12 text-center">We integrate eco-friendly practices in every aspect of our development.</p>
+      <div class="grid md:grid-cols-3 gap-12">
+        <!-- Sustainability Feature 1 -->
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow text-center">
+          <i data-lucide="leaf" class="w-12 h-12 text-green-500 mb-6"></i>
+          <h3 class="text-2xl font-bold mb-4">Green Building Materials</h3>
+          <p class="text-gray-600">Using sustainable materials to reduce environmental impact.</p>
+        </div>
+        <!-- Sustainability Feature 2 -->
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow text-center">
+          <i data-lucide="droplet" class="w-12 h-12 text-blue-500 mb-6"></i>
+          <h3 class="text-2xl font-bold mb-4">Water Conservation</h3>
+          <p class="text-gray-600">Implementing systems that reduce water usage.</p>
+        </div>
+        <!-- Sustainability Feature 3 -->
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow text-center">
+          <i data-lucide="wind" class="w-12 h-12 text-teal-500 mb-6"></i>
+          <h3 class="text-2xl font-bold mb-4">Energy Efficiency</h3>
+          <p class="text-gray-600">Optimizing energy use with smart technology.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-20 bg-gray-100" id="testimonials">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-16">What Our Clients Say</h2>
+      <div class="grid md:grid-cols-3 gap-12">
+        <!-- Testimonial 1 -->
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <p class="text-gray-600 mb-6">"Living here has been a dream come true. The smart features and sustainable design are unmatched."</p>
+          <div class="flex items-center">
+            <img src="client1.jpg" alt="Client 1" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="text-lg font-bold">John Doe</h4>
+              <p class="text-sm text-gray-500">Entrepreneur</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <p class="text-gray-600 mb-6">"The attention to detail and luxury finishes make every day feel like a vacation."</p>
+          <div class="flex items-center">
+            <img src="client2.jpg" alt="Client 2" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="text-lg font-bold">Jane Smith</h4>
+              <p class="text-sm text-gray-500">Designer</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <p class="text-gray-600 mb-6">"An exceptional living experience with cutting-edge technology and elegance."</p>
+          <div class="flex items-center">
+            <img src="client3.jpg" alt="Client 3" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="text-lg font-bold">Michael Lee</h4>
+              <p class="text-sm text-gray-500">Tech Executive</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-20 bg-gray-900 text-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-8">Ready to Elevate Your Living?</h2>
+      <p class="text-xl text-gray-300 mb-12">Discover the pinnacle of luxury and sustainability today.</p>
+      <a href="#contact" class="bg-amber-500 text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-amber-400 transition-colors">
+        Get in Touch
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-20" id="contact">
+    <div class="container mx-auto px-6">
+      <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
+        <div class="md:flex">
+          <div class="md:w-1/2 bg-gray-100 p-12">
+            <h3 class="text-3xl font-bold mb-6">Contact Us</h3>
+            <p class="text-gray-600 mb-8">Schedule a private viewing or request more information</p>
+            <form class="space-y-6">
+              <div>
+                <input type="text" placeholder="Full Name" class="w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-gray-900">
+              </div>
+              <div>
+                <input type="email" placeholder="Email Address" class="w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-gray-900">
+              </div>
+              <div>
+                <textarea placeholder="Your Message" rows="4" class="w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-gray-900"></textarea>
+              </div>
+              <button class="w-full bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors">
+                Send Message
+              </button>
+            </form>
+          </div>
+          <div class="md:w-1/2 p-12 flex items-center">
+            <div>
+              <h3 class="text-2xl font-bold mb-6">Visit Our Showroom</h3>
+              <div class="space-y-4 text-gray-600">
+                <p class="flex items-center">
+                  <i data-lucide="map-pin" class="w-5 h-5 mr-3"></i>
+                  123 Luxury Avenue, Beverly Hills, CA
+                </p>
+                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                <p>Saturday: 10:00 AM - 4:00 PM</p>
+                <a href="https://www.google.com/maps" target="_blank" class="mt-8 inline-flex items-center text-gray-900 font-semibold hover:text-gray-700">
+                  Get Directions
+                  <i data-lucide="external-link" class="w-4 h-4 ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-12">
+        <div>
+          <h4 class="text-lg font-bold mb-4">About Us</h4>
+          <p class="text-gray-400">Leading the way in sustainable luxury living with innovative design and technology.</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold mb-4">Properties</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#available-units" class="hover:text-white">Available Units</a></li>
+            <li><a href="#floor-plans" class="hover:text-white">Floor Plans</a></li>
+            <li><a href="#virtual-tours" class="hover:text-white">Virtual Tours</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold mb-4">Resources</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#sustainability" class="hover:text-white">Sustainability</a></li>
+            <li><a href="#features" class="hover:text-white">Smart Features</a></li>
+            <li><a href="#design" class="hover:text-white">Design Process</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold mb-4">Connect</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#" class="hover:text-white">Instagram</a></li>
+            <li><a href="#" class="hover:text-white">LinkedIn</a></li>
+            <li><a href="#" class="hover:text-white">Pinterest</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+        <p>&copy; 2024 Ammar Real Estate Development. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript Code -->
+  <script>
+    // Lucide Icons Initialization
+    lucide.createIcons();
+
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Design Showcase Data
+    const designs = {
+      exterior: [
+        {
+          title: "Modern Facade",
+          image: "tesla.jpg",
+          description: "Contemporary architecture with sustainable materials"
+        },
+        {
+          title: "Landscaped Gardens",
+          image: "garden.jpeg",
+          description: "Drought-resistant native plants and water features"
+        }
+      ],
+      interior: [
+        {
+          title: "Open Concept Living",
+          image: "open.jpeg",
+          description: "Seamless flow between spaces with natural light"
+        },
+        {
+          title: "Designer Kitchen",
+          image: "kitchen.jpeg",
+          description: "Premium appliances and custom cabinetry"
+        }
+      ]
+    };
+
+    let activeTab = 'exterior';
+
+    function renderDesigns() {
+      const designsContainer = document.getElementById('designsContainer');
+      designsContainer.innerHTML = ''; // Clear existing content
+      designs[activeTab].forEach(design => {
+        const designDiv = document.createElement('div');
+        designDiv.className = 'group relative overflow-hidden rounded-xl';
+        designDiv.innerHTML = `
+          <img src="${design.image}" alt="${design.title}" class="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+            <div class="absolute bottom-0 left-0 right-0 p-8">
+              <h3 class="text-2xl font-bold text-white mb-2">${design.title}</h3>
+              <p class="text-gray-200">${design.description}</p>
+            </div>
+          </div>
+        `;
+        designsContainer.appendChild(designDiv);
+      });
+    }
+
+    document.getElementById('exteriorBtn').addEventListener('click', function() {
+      activeTab = 'exterior';
+      renderDesigns();
+      this.classList.add('bg-gray-900', 'text-white');
+      this.classList.remove('bg-gray-100', 'text-gray-700');
+      document.getElementById('interiorBtn').classList.remove('bg-gray-900', 'text-white');
+      document.getElementById('interiorBtn').classList.add('bg-gray-100', 'text-gray-700');
+    });
+
+    document.getElementById('interiorBtn').addEventListener('click', function() {
+      activeTab = 'interior';
+      renderDesigns();
+      this.classList.add('bg-gray-900', 'text-white');
+      this.classList.remove('bg-gray-100', 'text-gray-700');
+      document.getElementById('exteriorBtn').classList.remove('bg-gray-900', 'text-white');
+      document.getElementById('exteriorBtn').classList.add('bg-gray-100', 'text-gray-700');
+    });
+
+    // Initial render
+    renderDesigns();
+  </script>
+</body>
+</html>
