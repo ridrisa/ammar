@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Luxury Real Estate</title>
+  <title>Ammar Real Estate</title>
   <!-- Tailwind CSS via CDN -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
   <!-- Lucide Icons via CDN -->
@@ -29,11 +29,11 @@
   <!-- Navigation Bar -->
   <nav class="bg-white shadow-md fixed w-full z-50">
     <div class="container mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="#" class="text-2xl font-bold text-gray-900">Ammar RealEstate</a>
+      <a href="#home" class="text-2xl font-bold text-gray-900">Ammar Real Estate</a>
       <div class="hidden md:flex space-x-6">
         <a href="#features" class="text-gray-700 hover:text-gray-900">Features</a>
         <a href="#design" class="text-gray-700 hover:text-gray-900">Design</a>
-        <a href="#testimonials" class="text-gray-700 hover:text-gray-900">Testimonials</a>
+        <a href="#available-units" class="text-gray-700 hover:text-gray-900">Units</a>
         <a href="#contact" class="text-gray-700 hover:text-gray-900">Contact</a>
       </div>
       <button id="menuBtn" class="md:hidden focus:outline-none">
@@ -44,7 +44,7 @@
     <div id="mobileMenu" class="hidden bg-white md:hidden">
       <a href="#features" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Features</a>
       <a href="#design" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Design</a>
-      <a href="#testimonials" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Testimonials</a>
+      <a href="#available-units" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Units</a>
       <a href="#contact" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Contact</a>
     </div>
   </nav>
@@ -116,6 +116,121 @@
     </div>
   </section>
 
+  <!-- Available Units Section -->
+  <section class="py-20 bg-gray-50" id="available-units">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-16">Available Units</h2>
+      <div class="grid md:grid-cols-3 gap-12">
+        <!-- Unit 1 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <img src="unit1.jpeg" alt="Unit 1" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-4">Penthouse Suite</h3>
+            <p class="text-gray-600 mb-4">4 Bed, 3 Bath, 3500 sqft</p>
+            <a href="#contact" class="text-amber-500 font-semibold hover:underline">Schedule a Tour</a>
+          </div>
+        </div>
+        <!-- Unit 2 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <img src="unit2.jpeg" alt="Unit 2" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-4">Garden Villa</h3>
+            <p class="text-gray-600 mb-4">3 Bed, 2.5 Bath, 2800 sqft</p>
+            <a href="#contact" class="text-amber-500 font-semibold hover:underline">Schedule a Tour</a>
+          </div>
+        </div>
+        <!-- Unit 3 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <img src="unit3.webpfloo" alt="Unit 3" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-4">City View Apartment</h3>
+            <p class="text-gray-600 mb-4">2 Bed, 2 Bath, 1800 sqft</p>
+            <a href="#contact" class="text-amber-500 font-semibold hover:underline">Schedule a Tour</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floor Plans Section -->
+  <section class="py-20" id="floor-plans">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-16">Floor Plans</h2>
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Floor Plan 1 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <img src="floorplan1.webp" alt="Floor Plan 1" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-4">Penthouse Layout</h3>
+            <a href="floorplan1.webp" target="_blank" class="text-amber-500 font-semibold hover:underline">View Full Plan</a>
+          </div>
+        </div>
+        <!-- Floor Plan 2 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <img src="floorplan2.webp" alt="Floor Plan 2" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-4">Villa Layout</h3>
+            <a href="floorplan2.webp" target="_blank" class="text-amber-500 font-semibold hover:underline">View Full Plan</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Virtual Tours Section -->
+  <section class="py-20 bg-gray-100" id="virtual-tours">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-8">Experience Virtual Tours</h2>
+      <p class="text-xl text-gray-600 mb-12">Explore our properties from the comfort of your home.</p>
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Virtual Tour 1 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <img src="porsh.jpg" alt="Virtual Tour 1" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-4">Penthouse Tour</h3>
+            <a href="https://www.youtube.com/watch?v=example1" target="_blank" class="text-amber-500 font-semibold hover:underline">Watch Tour</a>
+          </div>
+        </div>
+        <!-- Virtual Tour 2 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <img src="15.jpg" alt="Virtual Tour 2" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-4">Villa Tour</h3>
+            <a href="https://www.youtube.com/watch?v=example2" target="_blank" class="text-amber-500 font-semibold hover:underline">Watch Tour</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sustainability Section -->
+  <section class="py-20" id="sustainability">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-16">Our Commitment to Sustainability</h2>
+      <p class="text-xl text-gray-600 mb-12 text-center">We integrate eco-friendly practices in every aspect of our development.</p>
+      <div class="grid md:grid-cols-3 gap-12">
+        <!-- Sustainability Feature 1 -->
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow text-center">
+          <i data-lucide="leaf" class="w-12 h-12 text-green-500 mb-6"></i>
+          <h3 class="text-2xl font-bold mb-4">Green Building Materials</h3>
+          <p class="text-gray-600">Using sustainable materials to reduce environmental impact.</p>
+        </div>
+        <!-- Sustainability Feature 2 -->
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow text-center">
+          <i data-lucide="droplet" class="w-12 h-12 text-blue-500 mb-6"></i>
+          <h3 class="text-2xl font-bold mb-4">Water Conservation</h3>
+          <p class="text-gray-600">Implementing systems that reduce water usage.</p>
+        </div>
+        <!-- Sustainability Feature 3 -->
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow text-center">
+          <i data-lucide="wind" class="w-12 h-12 text-teal-500 mb-6"></i>
+          <h3 class="text-2xl font-bold mb-4">Energy Efficiency</h3>
+          <p class="text-gray-600">Optimizing energy use with smart technology.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Testimonials Section -->
   <section class="py-20 bg-gray-100" id="testimonials">
     <div class="container mx-auto px-6">
@@ -125,7 +240,7 @@
         <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
           <p class="text-gray-600 mb-6">"Living here has been a dream come true. The smart features and sustainable design are unmatched."</p>
           <div class="flex items-center">
-            <img src="home.jpg" alt="Client 1" class="w-12 h-12 rounded-full mr-4">
+            <img src="client1.jpg" alt="Client 1" class="w-12 h-12 rounded-full mr-4">
             <div>
               <h4 class="text-lg font-bold">John Doe</h4>
               <p class="text-sm text-gray-500">Entrepreneur</p>
@@ -136,7 +251,7 @@
         <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
           <p class="text-gray-600 mb-6">"The attention to detail and luxury finishes make every day feel like a vacation."</p>
           <div class="flex items-center">
-            <img src="int.png" alt="Client 2" class="w-12 h-12 rounded-full mr-4">
+            <img src="client2.jpg" alt="Client 2" class="w-12 h-12 rounded-full mr-4">
             <div>
               <h4 class="text-lg font-bold">Jane Smith</h4>
               <p class="text-sm text-gray-500">Designer</p>
@@ -147,7 +262,7 @@
         <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
           <p class="text-gray-600 mb-6">"An exceptional living experience with cutting-edge technology and elegance."</p>
           <div class="flex items-center">
-            <img src="int2.png" alt="Client 3" class="w-12 h-12 rounded-full mr-4">
+            <img src="client3.jpg" alt="Client 3" class="w-12 h-12 rounded-full mr-4">
             <div>
               <h4 class="text-lg font-bold">Michael Lee</h4>
               <p class="text-sm text-gray-500">Tech Executive</p>
@@ -225,17 +340,17 @@
         <div>
           <h4 class="text-lg font-bold mb-4">Properties</h4>
           <ul class="space-y-2 text-gray-400">
-            <li><a href="#" class="hover:text-white">Available Units</a></li>
-            <li><a href="#" class="hover:text-white">Floor Plans</a></li>
-            <li><a href="#" class="hover:text-white">Virtual Tours</a></li>
+            <li><a href="#available-units" class="hover:text-white">Available Units</a></li>
+            <li><a href="#floor-plans" class="hover:text-white">Floor Plans</a></li>
+            <li><a href="#virtual-tours" class="hover:text-white">Virtual Tours</a></li>
           </ul>
         </div>
         <div>
           <h4 class="text-lg font-bold mb-4">Resources</h4>
           <ul class="space-y-2 text-gray-400">
-            <li><a href="#" class="hover:text-white">Sustainability</a></li>
-            <li><a href="#" class="hover:text-white">Smart Features</a></li>
-            <li><a href="#" class="hover:text-white">Design Process</a></li>
+            <li><a href="#sustainability" class="hover:text-white">Sustainability</a></li>
+            <li><a href="#features" class="hover:text-white">Smart Features</a></li>
+            <li><a href="#design" class="hover:text-white">Design Process</a></li>
           </ul>
         </div>
         <div>
@@ -248,7 +363,7 @@
         </div>
       </div>
       <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-        <p>&copy; 2024 Luxury Real Estate Development. All rights reserved.</p>
+        <p>&copy; 2024 Ammar Real Estate Development. All rights reserved.</p>
       </div>
     </div>
   </footer>
